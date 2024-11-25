@@ -12,3 +12,9 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 Prototype: 
 int _printf(const char *format, ...);
+
+Ubuntu 20.04 LTS
+
+Lien github collaborateur https://github.com/Krosenvag
+Lien github collaborateur https://github.com/Mathis-Bermond
+
