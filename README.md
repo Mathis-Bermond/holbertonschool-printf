@@ -22,6 +22,7 @@ That image shows specifiers that we can use in the printf.  In this case, _print
 |X|print_hexadecimal_upp|print a number in base 16 uppercase|
 |o|print_octal|print a number in base 8| 
 |R|print_rot|print a string encoded in rot13 format| 
+
 Authorized functions and macros
 •	write (man 2 write)
 •	malloc (man 3 malloc)
