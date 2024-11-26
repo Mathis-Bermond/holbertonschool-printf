@@ -1,24 +1,67 @@
 #include "main.h"
 
-int (*get_func_dif(va_list list))
-{
-	dif op[] = {
-		{"%c", p_char},
-		{"%s", p_string},
-		{"%%", p_%},
-		{"%d", p_d},
-		{"%i", p_i},
-		{NULL, NULL}
-	};
-	int i = 0;
+int _printf(const char *format, ...);
 
-	while (op[i].op != NULL)
+int main(void)
+{
+	_printf("Hello, %s!\n", "world");
+	_printf("Number: %d\n", 42);
+	return (0);
+}
+
+int _printf(const char *format, ...)
+{
+	va_list args;
+	int i = 0, count = 0;
+
+	char *str;
+
+	int num;
+
+	va_start(args, format);
+
+	while (format && format[i])
 	{
-		if (*(op[i].op) == *list)
+		if (format[i] == '%')
 		{
-			return (op[i].a);
+			i++;
+			switch (format[i])
+			{
+				case 's':
+					str = va_arg(args, char *);
+					while (*str)
+					{
+						write(1, str++, 1);
+						count++;
+					}
+					break;
+				case 'd':
+					num = va_arg(args, int);
+					char buffer[50];
+
+					int len = snprintf(buffer, 50, "%d", num);
+
+					write(1, buffer, len);
+					count += len;
+					break;
+				case '%':
+					write(1, "%", 1);
+					count++;
+					break;
+				default:
+					write(1, &format[i], 1);
+					count++;
+					break;
+			}
+		}
+		else
+		{
+			write(1, &format[i], 1);
+			count++;
 		}
 		i++;
 	}
-	return (NULL);
+
+	va_end(args);
+	return (count);
 }
