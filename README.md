@@ -1,5 +1,5 @@
 ﻿# _printf  
-![enter image description here](file:///C:/Users/herve/OneDrive/Documents/Sc%C3%A9nario%20Les%20enfants%20des%20dieux%20et%20des%20d%C3%A9mons/Carte%20Monde/Capture%20d'%C3%A9cran%202024-11-26%20094906.png) 
+![alt text](file:///C:/Users/herve/OneDrive/Documents/Sc%C3%A9nario%20Les%20enfants%20des%20dieux%20et%20des%20d%C3%A9mons/Carte%20Monde/Capture%20d'%C3%A9cran%202024-11-26%20094906.jpg) 
 That is the prototype for this implementation(_printf). As you can see, this prototype is an implementation of the **printf standard function** and **variadic function** .  ## What is printf? "Writes the C string pointed by _format_ to the standard output ([stdout](http://www.cplusplus.com/stdout))" - [cplusplus](http://www.cplusplus.com/reference/cstdio/printf/) 
 
 In other words, the function receives a format (*const char* **format*) and a list of arguments . So printf inside, take the string format and search for specific patterns, then the pattern that was found it is passed to other function that prints the match pattern  
