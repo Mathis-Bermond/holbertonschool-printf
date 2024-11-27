@@ -16,17 +16,17 @@ int _putchar(char c)
 
 /**
 * print_integer - Print a number in base 10
-* @list: Number to print in base 10
+* @args: Number to print in base 10
 *
 * Return: Length of th numbers in decimal
 **/
-int print_integer(va_list list)
+int print_integer(va_list args)
 {
 	char *p_i;
 
 	int size;
 
-	p_i = itoa(va_arg(list, int), 10);
+	p_i = itoa(va_arg(args, int), 10);
 
 	size = print((p_i != NULL) ? p_i : "NULL");
 
@@ -36,18 +36,18 @@ int print_integer(va_list list)
 
 /**
 * print_string - Print string
-* @list: list.
+* @args: list of arguments.
 *
 * Return: String length.
 */
 
-int print_string(va_list list)
+int print_string(va_list args)
 {
 	char *p;
 
 	int p_len;
 
-	p = va_arg(list, char*);
+	p = va_arg(args, char*);
 	p_len = print((p != NULL) ? p : "(null)");
 
 	return (p_len);
@@ -55,28 +55,28 @@ int print_string(va_list list)
 
 /**
 * print_percent - Print a percent sign
-* @list: list.
+* @args: list.
 *
 * Return: Always 1.
 */
 
-int print_percent(va_list list)
+int print_percent(va_list args)
 {
-		(void)list;
+		(void)args;
 		_putchar('%');
 		return (1);
 }
 /**
  * print_char - print char.
- * @list: va_list.
+ * @args: va_list.
  *
  * Return: 1
  */
-int print_char(va_list list)
+int print_char(va_list args)
 {
 	int aux;
 
-	aux = va_arg(list, int );
+	aux = va_arg(args, int);
 
 	_putchar(aux);
 

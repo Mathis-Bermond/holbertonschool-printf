@@ -3,13 +3,13 @@
 #include "main.h"
 /**
  * print_octal - Print an unsigned integer in octal base
- * @list: List containing the number to print
+ * @args: List containing the number to print
  *
  * Return: Length of the printed number
  **/
-int print_octal(va_list list)
+int print_octal(va_list args)
 {
-	unsigned int num = va_arg(list, unsigned int);
+	unsigned int num = va_arg(args, unsigned int);
 	char buffer[12]; /* Buffer large enough to hold octal representation */
 	int i = 0, size = 0;
 

@@ -2,11 +2,11 @@
 
 /**
  * print_hexadecimal_low - Print a number in hexadecimal format
- * @list: Number to print
+ * @args: Number to print
  *
  * Return: Length of the number
  **/
-int print_hexadecimal_low(va_list list)
+int print_hexadecimal_low(va_list args)
 {
 	char *p_buff;
 	int size;

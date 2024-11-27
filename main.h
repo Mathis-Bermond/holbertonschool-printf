@@ -13,10 +13,19 @@ typedef struct dif
 } dif_t;
 
 int _printf(const char *format, ...);
-int print_octal(va_list list);
-int print_string(va_list list);
-int print_integer(va_list list);
-int print_binary(va_list list);
+int print_octal(va_list args);
+int print_string(va_list args);
+int print_integer(va_list args);
+int print_binary(va_list args);
+int print_percent(va_list args);
+int print_char(va_list args);
 int _putchar(char c);
+int print_pointer(va_list args);
+int print_unsigned(va_list args);
+int print_hex(va_list args);
+int print_HEX(va_list args);
+int print_hexadecimal_upp(va_list args);
+int print_rev(va_list args);
+int print_rot13(va_list args);
 
 #endif

@@ -19,13 +19,19 @@ int get_op_func(const char *format, unsigned int *i, va_list args, int *count)
 		{"i", print_integer},
 		{"b", print_binary},
 		{"o", print_octal},
+		{"u", print_unsigned},
+		{"x", print_hex},
+		{"X", print_HEX},
+		{"p", print_pointer},
 		{NULL, NULL}
 };
+	int j = 0;
+
 	while (dif[j].dif)
 	{
 		if (format[*i + 1] == dif[j].dif[0])
 		{
-			dif[j].f(args);
+			dif[j].t(args);
 			*count += 1;
 			*i += 1;
 			return (0);
@@ -44,5 +50,31 @@ int get_op_func(const char *format, unsigned int *i, va_list args, int *count)
 */
 int _printf(const char *format, ...)
 {
+	va_list args;
+	unsigned int i = 0;
 
+	int count = 0;
+
+	va_start(args, format);
+	if (!format || (format[0] == '%' && !format[1]))
+		return (-1);
+	while (format[i])
+	{
+		if (format[i] == '%')
+		{
+			if (get_op_func(format, &i, args, &count) == 1)
+			{
+				_putchar(format[i]);
+				count++;
+			}
+		}
+		else
+		{
+			_putchar(format[i]);
+			count++;
+		}
+		i++;
+	}
+	va_end(args);
+	return (count);
 }
