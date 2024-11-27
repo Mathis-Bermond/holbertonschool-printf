@@ -7,11 +7,16 @@
 
 typedef struct dif
 {
-	char *dif
-	void (*a)(int a, int b);
+	char *dif;
+	void (*f)(va_list);
 
-}dif_p;
+} dif_t;
 
 int _printf(const char *format, ...);
+int print_octal(va_list list);
+int print_string(va_list list);
+int print_integer(va_list list);
+int print_binary(va_list list);
+int _putchar(char c);
 
 #endif
