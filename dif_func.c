@@ -52,3 +52,17 @@ int print_string(va_list list)
 
 	return (p_len);
 }
+
+/**
+* print_percent - Print a percent sign
+* @list: list.
+*
+* Return: Always 1.
+*/
+
+int print_percent(va_list list)
+{
+		(void)list;
+		_putchar('%');
+		return (1);
+}
