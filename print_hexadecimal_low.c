@@ -1,19 +1,25 @@
 #include "main.h"
 
 /**
- * print_hexadecimal_low - Print a number in hexadecimal format
- * @args: Number to print
- *
- * Return: Length of the number
- **/
+* print_hexadecimal_low - Print a number in hexadecimal format
+* @args: Number to print
+*
+* Return: Length of the number
+**/
 int print_hexadecimal_low(va_list args)
 {
 	char *p_buff;
+
 	int size;
 
-	p_buff = itoa(va_arg(list, unsigned int), 16);
+	unsigned int num = va_arg(args, unsigned int);
 
-	size = print((p_buff != NULL) ? p_buff : "NULL");
+	char buffer[20];
+
+	sprintf(buffer, "%x", num);
+	p_buff = buffer;
+
+	size = printf((p_buff != NULL) ? p_buff : "NULL");
 
 	return (size);
 }

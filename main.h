@@ -4,6 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <string.h>
 
 typedef struct print_struct
 {
