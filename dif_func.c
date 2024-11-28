@@ -31,6 +31,7 @@ int print_integer(va_list args)
 
 	int num = va_arg(args, int);
 	char buffer[12];
+
 	write(buffer, "%d", num);
 	p_i = buffer;
 
