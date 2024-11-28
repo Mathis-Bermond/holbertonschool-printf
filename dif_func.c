@@ -39,6 +39,9 @@ int print_integer(va_list args)
 
 	int i = 0;
 
+	if (num < INT_MIN || num > INT_MAX)
+		return (1);
+
 	if (num < 0)
 	{
 		_putchar ('-');
@@ -60,8 +63,6 @@ int print_integer(va_list args)
 		_putchar(buffer[i]);
 		size++;
 	}
-	if (num < INT_MIN || num > INT_MAX)
-		return (1);
 	return (size);
 }
 
