@@ -1,6 +1,6 @@
 # Project Printf
 
-That is the prototype for this implementation(_printf). As you can see, this prototype is an implementation of the ==printf standard function== and ==variadic function== .  ## What is printf? "Writes the C string pointed by _format_ to the standard output ([stdout](http://www.cplusplus.com/stdout))"
+That is the prototype for this implementation(_printf). As you can see, this prototype is an implementation of the **printf standard function** and **variadic function** .  ## What is printf? "Writes the C string pointed by _format_ to the standard output ([stdout](http://www.cplusplus.com/stdout))"
 
 In other words, the function receives a format (*const char* **format*) and a list of arguments (the magic of variadic functions). So printf inside, take the string format and search for specific patterns, then the pattern that was found it is passed to other function that prints the match pattern  
 
@@ -48,8 +48,7 @@ OS version:
 
 >Ubuntu 20.04 LTS
 
-This project was a group projet in colaboration with (Krosenvag)[https://github.com/Krosenvag]
+This project was a group projet in colaboration with [Krosenvag](https://github.com/Krosenvag)
 
 ![enter image description here](https://i.redd.it/ocz7g3ixkl211.jpg)
 
-Lien github collaborateur https://github.com/Mathis-Bermond
