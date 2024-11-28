@@ -14,10 +14,12 @@ int print(const char *str)
 
 	{
 		while (*str)
-		_putchar(*str++);
-		size++;
+		{
+			_putchar(*str++);
+			size++;
+		}
 	}
-	return (size);
+	return (size + 1);
 }
 
 /**
@@ -70,9 +72,21 @@ int print_integer(va_list args)
 
 int print_string(va_list args)
 {
+	int count = 0;
 	char *p = va_arg(args, char *);
+	int i = 0;
 
-	return (print((p != NULL) ? p : "(null)"));
+	if (p == NULL)
+	{
+		p = "(null)";
+	}
+	while (p[i])
+	{
+		_putchar(p[i]);
+		i++;
+		count++;
+	}
+	return (count);
 }
 
 /**

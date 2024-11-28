@@ -20,15 +20,14 @@ int print_octal(va_list args)
 	}
 	while (num > 0)
 	{
-	buffer[i++] = (num % 8) + '0'; /* Get the last octal digit */
-	num /= 8; /* Remove the last octal digit */
+	buffer[i++] = (num % 8) + '0';
+	num /= 8;
 	}
 	while (i--)
 	{
 	write(1, &buffer[i], 1);
-	size++;
+	++size;
 	}
-
 	return (size);
 }
 

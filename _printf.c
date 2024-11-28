@@ -35,8 +35,7 @@ int get_op_func(const char *format, unsigned int *i, va_list args, int *count)
 	{
 		if (format[*i + 1] == dif[j].dif[0])
 		{
-			dif[j].f(args);
-			*count += 1;
+			*count += dif[j].f(args);
 			*i += 1;
 			return (0);
 		}

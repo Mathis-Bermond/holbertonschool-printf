@@ -28,7 +28,9 @@ int print_hex(va_list args)
 	}
 
 	for (j = i - 1; j >= 0; j--)
-		_putchar(buffer[j]);
-
+		{
+			_putchar(buffer[j]);
+			i++;
+		}
 	return (i);
 }
