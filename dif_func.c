@@ -43,7 +43,6 @@ int print_string(va_list args)
 	p = va_arg(args, char*);
 	if (p == NULL)
 		p = "(null)";
-	
 	p_len = strlen(p);
 	write(1, p, p_len);
 

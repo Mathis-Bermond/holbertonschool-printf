@@ -35,6 +35,7 @@ int rot13(char *s)
  *
  * Return: Length of the string encoded
  **/
+
 int print_rot(va_list list)
 {
 	char *p;
