@@ -8,7 +8,6 @@
 #include <unistd.h>
 #include <string.h>
 #include <limits.h>
-#include <iostream>
 
 /**
  * struct print_struct - Struct for print
