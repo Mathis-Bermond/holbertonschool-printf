@@ -1,5 +1,5 @@
 # Project Printf
-![enter image description here](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.reddit.com%2Fr%2FProgrammerHumor%2Fcomments%2F8pb83p%2Fprintf_it_is%2F&psig=AOvVaw0ovHZQNl-zsKfH3rDQ3wTQ&ust=1732883462833000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOCKmI2E_4kDFQAAAAAdAAAAABAY)
+![enter image description here](https://i.redd.it/ocz7g3ixkl211.jpg)
 
 'printf(argument);'
 
