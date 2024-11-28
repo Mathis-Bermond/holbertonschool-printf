@@ -23,6 +23,10 @@ int get_op_func(const char *format, unsigned int *i, va_list args, int *count)
 		{"x", print_hex},
 		{"X", print_HEX},
 		{"p", print_pointer},
+		{"S", print_rev},
+		{"r", print_rot13},
+		{"R", print_rot13},
+		{"%", print_percent},
 		{NULL, NULL}
 };
 	int j = 0;

@@ -1,25 +1,34 @@
 #include "main.h"
 
 /**
-* print_hexadecimal_low - Print a number in hexadecimal format
+* print_hex - Print a number in hexadecimal format
 * @args: Number to print
 *
 * Return: Length of the number
 **/
-int print_hexadecimal_low(va_list args)
+int print_hex(va_list args)
 {
-	char *p_buff;
-
-	int size;
-
-	unsigned int num = va_arg(args, unsigned int);
-
 	char buffer[20];
+	int i = 0;
+	int j = 0;
+	unsigned int num = va_arg(args, unsigned int);
+	char hex_digits[] = "0123456789abcdef";
 
-	sprintf(buffer, "%x", num);
-	p_buff = buffer;
+	if (num == 0)
+	{
+		buffer[i++] = '0';
+	}
+	else
+	{
+		while (num > 0)
+		{
+			buffer[i++] = hex_digits[num % 16];
+			num /= 16;
+		}
+	}
 
-	size = printf((p_buff != NULL) ? p_buff : "NULL");
+	for (j = i - 1; j >= 0; j--)
+		_putchar(buffer[j]);
 
-	return (size);
+	return (i);
 }

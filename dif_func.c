@@ -3,17 +3,6 @@
 #include <stdarg.h>
 
 /**
-* _putchar - writes the character c to stdout
-* @c: The character to print
-*
-* Return: On succes 1.
-* On error, -1 is returned.
-*/
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-/**
 * print - Helper function to print a string
 * @str: The string to print
 * Return: The number of characters printed

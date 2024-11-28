@@ -4,47 +4,42 @@ int is_lowercase(char);
 char *string_to_upper(char *);
 
 /**
-* print_hexadecimal_upp - Print a number in hexadecimal format
+* print_HEX - Print a number in hexadecimal format
 * @args: Number to print
 *
 * Return: Length of the number
 **/
 
-int print_hexadecimal_upp(va_list args)
+int print_HEX(va_list args)
 {
-	char *p_buff;
+	char buffer[20];
 
-	int size;
+	int i = 0;
+
+	int len = i;
 
 	unsigned int num = va_arg(args, unsigned int);
 
-	p_buff = malloc(33);
-	if (p_buff != NULL)
-		itoa(num, p_buff, 16);
-	char buffer[20];
+	unsigned int temp = num;
 
-	sprintf(buffer, "%X", num);
-	p_buff = buffer;
-	p_buff = string_to_upper(p_buff);
-}
+	const char hex_digits[] = "0123456789ABCDEF";
 
-/**
-* print - Print a string
-* @str: String to print
-*
-* Return: Length of the string
-**/
-
-int print(const char *str)
-{
-	int len = 0;
-
-	while (*str)
+	if (num == 0)
 	{
-		_putchar(*str++);
-		len++;
+		_putchar('0');
+		return (1);
 	}
-
+	while (temp > 0)
+	{
+		buffer[i] = hex_digits[temp % 16];
+		temp = temp / 16;
+		i++;
+	}
+	while (i > 0)
+	{
+		i--;
+		_putchar(buffer[i]);
+	}
 	return (len);
 }
 
