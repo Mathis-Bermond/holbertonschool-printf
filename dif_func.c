@@ -40,11 +40,9 @@ int print_integer(va_list args)
 
 	int i = 0;
 
-	if (num == INT_MIN)
+	if (num < INT_MIN)
 	{
-		_putchar('-');
-		num = -(num + 1);
-		num++;
+		return (1);
 	}
 	if (num < 0)
 	{

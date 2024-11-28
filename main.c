@@ -58,5 +58,11 @@ int main(void)
 	len2 = printf("Percent:[%%]\n");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
+	len = -1939144704;
+	_printf("INTMIN[%d]\n", len);
+	len2 = -1939144704;
+	printf("INTMIN[%d]\n", len2);
+	_printf("Len:[%d]\n", len);
+	printf("Len:[%d]\n", len2);
 	return (0);
 }
