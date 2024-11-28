@@ -1,5 +1,5 @@
 # Project Printf
-![https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.reddit.com%2Fr%2FProgrammerHumor%2Fcomments%2F8pb83p%2Fprintf_it_is%2F&psig=AOvVaw0ovHZQNl-zsKfH3rDQ3wTQ&ust=1732883462833000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOCKmI2E_4kDFQAAAAAdAAAAABAY] 
+![](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.reddit.com%2Fr%2FProgrammerHumor%2Fcomments%2F8pb83p%2Fprintf_it_is%2F&psig=AOvVaw0ovHZQNl-zsKfH3rDQ3wTQ&ust=1732883462833000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOCKmI2E_4kDFQAAAAAdAAAAABAY)
 
 'printf(argument);'
 
@@ -40,13 +40,13 @@ That image shows specifiers that we can use in the printf.  In this case, _print
 
 ### Compilation
 
-•	Your code will be compiled this way:
-'gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c'
+Your code will be compiled this way:
+`gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c`
 
 Prototype: 
-'int _printf(const char *format, ...);'
+`int _printf(const char *format, ...);`
 
-OS version :
+OS version:
 
 >Ubuntu 20.04 LTS
 
