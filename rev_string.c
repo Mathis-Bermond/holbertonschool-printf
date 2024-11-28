@@ -2,7 +2,7 @@
 
 /**
  * print_rev_string - Print a string in reverse
- * @list: List of arguments
+ * @args: List of arguments
  *
  * Return: Length of the string
  **/
@@ -11,7 +11,7 @@ int  print_rev_string(va_list args)
 	int i, size;
 	const char *str;
 
-	str = va_arg(list, const char *);
+	str = va_arg(args, const char *);
 
 	size = _strlen(str);
 

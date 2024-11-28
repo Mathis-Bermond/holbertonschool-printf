@@ -5,10 +5,10 @@
 #include <stdlib.h>
 #include <limits.h>
 
-typedef struct dif
+typedef struct print_struct
 {
 	char *dif;
-	void (*f)(va_list);
+	int (*f)(va_list);
 
 } dif_t;
 
