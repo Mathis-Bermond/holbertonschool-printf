@@ -1,16 +1,12 @@
 # Project Printf
-![enter image description here](https://i.redd.it/ocz7g3ixkl211.jpg)
 
-'printf(argument);'
-
-That is the prototype for this implementation(_printf). As you can see, this prototype is an implementation of the **printf standard function** and **variadic function** .  ## What is printf? "Writes the C string pointed by _format_ to the standard output ([stdout](http://www.cplusplus.com/stdout))" - [cplusplus](http://www.cplusplus.com/reference/cstdio/printf/) 
+That is the prototype for this implementation(_printf). As you can see, this prototype is an implementation of the ==printf standard function== and ==variadic function== .  ## What is printf? "Writes the C string pointed by _format_ to the standard output ([stdout](http://www.cplusplus.com/stdout))"
 
 In other words, the function receives a format (*const char* **format*) and a list of arguments (the magic of variadic functions). So printf inside, take the string format and search for specific patterns, then the pattern that was found it is passed to other function that prints the match pattern  
 
 ### Patterns 
 
-![enter image description here](https://i.imgur.com/vmU0FhC.png) 	
- [cplusplus](http://www.cplusplus.com/reference/cstdio/printf)  
+![enter image description here](https://i.imgur.com/vmU0FhC.png) 	 
 
 That image shows specifiers that we can use in the printf.  In this case, _printf just allow specifiers like
 
@@ -41,18 +37,19 @@ That image shows specifiers that we can use in the printf.  In this case, _print
 ### Compilation
 
 Your code will be compiled this way:
+
 `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c`
 
 Prototype: 
+
 `int _printf(const char *format, ...);`
 
 OS version:
 
 >Ubuntu 20.04 LTS
 
+This project was a group projet in colaboration with (Krosenvag)[https://github.com/Krosenvag]
 
-=======
-Authorized functions and macros • write (man 2 write) • malloc (man 3 malloc) • free (man 3 free) • va_start (man 3 va_start) • va_end (man 3 va_end) • va_copy (man 3 va_copy) • va_arg (man 3 va_arg) Compilation • Your code will be compiled this way: $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+![enter image description here](https://i.redd.it/ocz7g3ixkl211.jpg)
 
-Lien github collaborateur https://github.com/Krosenvag
 Lien github collaborateur https://github.com/Mathis-Bermond
