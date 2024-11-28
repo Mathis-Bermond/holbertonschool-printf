@@ -39,7 +39,7 @@ int print_integer(va_list args)
 
 	int i = 0;
 
-	if (num < 0)
+	if (num < 0 || num > INT_MAX)
 	{
 		_putchar ('-');
 		size++;
@@ -50,7 +50,7 @@ int print_integer(va_list args)
 		_putchar('0');
 		return (1);
 	}
-	while (num > 0)
+	while (num > 0 || num < INT_MIN)
 	{
 		buffer[i++] = (num % 10) + '0';
 		num /= 10;
