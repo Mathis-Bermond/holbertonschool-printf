@@ -88,3 +88,38 @@ int print_percent(va_list args)
 		_putchar('%');
 	return (1);
 }
+
+/**
+ * print_unsigned - Print a unsigned int
+ * @args: Number to print
+ *
+ * Return: Length of the number
+ **/
+
+int print_unsigned(va_list args)
+{
+	unsigned int num = va_arg(args, unsigned int);
+	int size = 0;
+	char buffer[12];
+	int i = 0;
+
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+
+	while (num > 0)
+	{
+		buffer[i++] = (num % 10) + '0';
+		num /= 10;
+	}
+
+	while (i-- > 0)
+	{
+		_putchar(buffer[i]);
+		size++;
+	}
+
+	return (size);
+}

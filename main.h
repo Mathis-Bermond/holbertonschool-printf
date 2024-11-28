@@ -8,6 +8,12 @@
 #include <unistd.h>
 #include <string.h>
 
+/**
+ * struct print_struct - Struct for print
+ * @dif: The format to print
+ * @f: The function to print
+ */
+
 typedef struct print_struct
 {
 	char *dif;
@@ -30,5 +36,6 @@ int print_HEX(va_list args);
 int print_hexadecimal_upp(va_list args);
 int print_rev(va_list args);
 int print_rot13(va_list args);
+char _itoa(long int num, char *str, int base);
 
 #endif
