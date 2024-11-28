@@ -35,18 +35,20 @@ int print_integer(va_list args)
 
 	int size = 0;
 
-	char buffer[10];
+	char buffer[12];
 
 	int i = 0;
 
-	if (num < INT_MIN || num > INT_MAX)
+	if (num < INT_MIN)
+	{
 		return (1);
-
+	}
 	if (num < 0)
 	{
 		_putchar ('-');
 		size++;
 		num = (unsigned int)(-(unsigned int)num);
+
 	}
 	if (num == 0)
 	{
@@ -76,7 +78,9 @@ int print_integer(va_list args)
 int print_string(va_list args)
 {
 	int count = 0;
+
 	char *p = va_arg(args, char *);
+
 	int i = 0;
 
 	if (p == NULL)
@@ -107,17 +111,20 @@ int print_percent(va_list args)
 }
 
 /**
- * print_unsigned - Print a unsigned int
- * @args: Number to print
- *
- * Return: Length of the number
- **/
+* print_unsigned - Print a unsigned int
+* @args: Number to print
+*
+* Return: Length of the number
+**/
 
 int print_unsigned(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
+
 	int size = 0;
+
 	char buffer[12];
+
 	int i = 0;
 
 	if (num == 0)
