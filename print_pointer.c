@@ -10,20 +10,30 @@ int _strcmp(char *, char *);
  **/
 int print_pointer(va_list list)
 {
-	char *p_buff;
-	int size;
+	void *ptr;
+	unsigned long int addr;
+	int size = 0;
+	char *hex = "0123456789abcdef";
+	char buffer[20];
+	int i = 0;
 
-	p_buff = itoa(va_arg(list, unsigned long int), 16);
+	ptr = va_arg(list, void *);
+	if (ptr == NULL)
+		return (_putchar('(') + _putchar('n') + _putchar('i') + _putchar('l') + _putchar(')'));
 
-	if (!_strcmp(p_buff, "0"))
-		return (print("(nil)"));
+	addr = (unsigned long int)ptr;
+	size = _putchar('0');
+	size += _putchar('x');
 
-	size = print("0x");
+	/* Convert address to hexadecimal */
+	do {
+		buffer[i++] = hex[addr % 16];
+		addr /= 16;
+	} while (addr > 0);
 
-	if (!_strcmp(p_buff, "-1"))
-		size += print("ffffffffffffffff");
-	else
-		size += print(p_buff);
+	/* Print in reverse order */
+	while (--i >= 0)
+		size += _putchar(buffer[i]);
 
 	return (size);
 }
