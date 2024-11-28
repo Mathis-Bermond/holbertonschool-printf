@@ -61,7 +61,7 @@ int print_integer(va_list args)
 		size++;
 	}
 	if (num < INT_MIN || num > INT_MAX)
-		return(1);
+		return (1);
 	return (size);
 }
 
