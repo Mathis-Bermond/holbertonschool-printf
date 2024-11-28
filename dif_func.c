@@ -1,6 +1,7 @@
 #include "main.h"
 #include <unistd.h>
 #include <stdarg.h>
+#include <limits.h>
 
 /**
 * print - Helper function to print a string
@@ -39,17 +40,17 @@ int print_integer(va_list args)
 
 	int i = 0;
 
-	if (num < INT_MIN)
-
+	if (num == INT_MIN)
 	{
-		return (1);
+		_putchar('-');
+		num = -(num + 1);
+		num++;
 	}
 	if (num < 0)
 	{
 		_putchar ('-');
 		size++;
 		num = (unsigned int)(-(unsigned int)num);
-
 	}
 	if (num == 0)
 	{
