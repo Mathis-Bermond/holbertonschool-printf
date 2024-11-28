@@ -40,6 +40,7 @@ int print_integer(va_list args)
 	int i = 0;
 
 	if (num < INT_MIN)
+
 	{
 		return (1);
 	}
