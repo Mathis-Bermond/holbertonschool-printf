@@ -19,7 +19,8 @@ int print_pointer(va_list list)
 
 	ptr = va_arg(list, void *);
 	if (ptr == NULL)
-		return (_putchar('(') + _putchar('n') + _putchar('i') + _putchar('l') + _putchar(')'));
+		return (_putchar('(') + _putchar('n') +
+			_putchar('i') + _putchar('l') + _putchar(')'));
 
 	addr = (unsigned long int)ptr;
 	size = _putchar('0');
