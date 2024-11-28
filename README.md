@@ -1,5 +1,8 @@
-# _printf  
-![enter image description here] 
+# Project Printf
+![https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.reddit.com%2Fr%2FProgrammerHumor%2Fcomments%2F8pb83p%2Fprintf_it_is%2F&psig=AOvVaw0ovHZQNl-zsKfH3rDQ3wTQ&ust=1732883462833000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOCKmI2E_4kDFQAAAAAdAAAAABAY] 
+
+'printf(argument);'
+
 That is the prototype for this implementation(_printf). As you can see, this prototype is an implementation of the **printf standard function** and **variadic function** .  ## What is printf? "Writes the C string pointed by _format_ to the standard output ([stdout](http://www.cplusplus.com/stdout))" - [cplusplus](http://www.cplusplus.com/reference/cstdio/printf/) 
 
 In other words, the function receives a format (*const char* **format*) and a list of arguments (the magic of variadic functions). So printf inside, take the string format and search for specific patterns, then the pattern that was found it is passed to other function that prints the match pattern  
@@ -9,7 +12,8 @@ In other words, the function receives a format (*const char* **format*) and a li
 ![enter image description here](https://i.imgur.com/vmU0FhC.png) 	
  [cplusplus](http://www.cplusplus.com/reference/cstdio/printf)  
 
-That image shows specifiers that we can use in the printf.  In this case, _printf just allow specifiers like   
+That image shows specifiers that we can use in the printf.  In this case, _printf just allow specifiers like
+
 |Specifiers|Functions|Description| 
 |--|--|--|
 |s|print_string|print a string| 
@@ -21,33 +25,34 @@ That image shows specifiers that we can use in the printf.  In this case, _print
 |x|print_hexadecimal_low|print a number in base 16 lowercase| 
 |X|print_hexadecimal_upp|print a number in base 16 uppercase|
 |o|print_octal|print a number in base 8| 
+|%|print__percent|print '%'|
 |R|print_rot|print a string encoded in rot13 format| 
 
-Authorized functions and macros
-•	write (man 2 write)
-•	malloc (man 3 malloc)
-•	free (man 3 free)
-•	va_start (man 3 va_start)
-•	va_end (man 3 va_end)
-•	va_copy (man 3 va_copy)
-•	va_arg (man 3 va_arg)
-Compilation
+### Authorized functions and macros
+
+- write
+- malloc
+- free
+- va_start
+- va_end
+- va_copy
+- va_arg
+
+### Compilation
+
 •	Your code will be compiled this way:
-$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+'gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c'
 
 Prototype: 
-int _printf(const char *format, ...);
-<<<<<<< HEAD
+'int _printf(const char *format, ...);'
 
-Ubuntu 20.04 LTS
+OS version :
 
-Lien github collaborateur https://github.com/Krosenvag
-Lien github collaborateur https://github.com/Mathis-Bermond
+>Ubuntu 20.04 LTS
+
 
 =======
 Authorized functions and macros • write (man 2 write) • malloc (man 3 malloc) • free (man 3 free) • va_start (man 3 va_start) • va_end (man 3 va_end) • va_copy (man 3 va_copy) • va_arg (man 3 va_arg) Compilation • Your code will be compiled this way: $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
-Ubuntu 20.04 LTS
-
-Lien github collaborateur https://github.com/Krosenvag Lien github collaborateur https://github.com/Mathis-Bermond
->>>>>>> Hervé
+Lien github collaborateur https://github.com/Krosenvag
+Lien github collaborateur https://github.com/Mathis-Bermond
