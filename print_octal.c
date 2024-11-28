@@ -31,3 +31,18 @@ int print_octal(va_list args)
 
 	return (size);
 }
+
+/**
+* print_char - Print a single charcacter
+* @args: Variadic argument list containing the character to print
+*
+* Return: Always 1 (the character count printed)
+*/
+
+int print_char(va_list args)
+{
+	int aux = va_arg(args, int);
+
+	_putchar(aux);
+	return (1);
+}
