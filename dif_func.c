@@ -1,81 +1,103 @@
 #include "main.h"
 #include <unistd.h>
-
-int print(const char *str);
+#include <stdarg.h>
 
 /**
-* print_integer - Print a number in base 10
-* @args: Number to print in base 10
-*
-* Return: Length of th numbers in decimal
-**/
-
-int print_integer(va_list args)
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On succes 1.
+ * On error, -1 is returned.
+ */
+int _putchar(char c)
 {
-	char *p_i;
-
-	int size;
-
-	int num = va_arg(args, int);
-	char buffer[12];
-
-	sprintf(buffer, "%d", num);
-	p_i = buffer;
-
-	size = strlen(p_i);
-	write(1, p_i, size);
+	return (write(1, &c, 1));
+}
+/**
+ * print - Helper function to print a string
+ * @str: The string to print
+ * Return : The number of characters printed
+ */
+int print(const char *str)
+{
+	int size = 0;
+	{
+	while (*str)
+	_putchar(*str++);
+	size++;
+	}
 
 	return (size);
 }
 
 /**
-* print_string - Print string
-* @args: list of arguments.
-*
-* Return: String length.
-*/
-
-int print_string(va_list args)
+ * print_integer - Print a number in base 10
+ *@args: Variadic argument list containing the number to print
+ *
+ *Return: Length of the number in decimal
+ */
+int print_integer(va_list args)
 {
-	char *p;
-	int p_len;
+	int num = va_arg(args, int);
+	int size = 0;
+	char buffer[10];
+	int i = 0;
 
-	p = va_arg(args, char*);
-	if (p == NULL)
-		p = "(null)";
-	p_len = strlen(p);
-	write(1, p, p_len);
+	{
+	if (num < 0)
+	_putchar ('-');
+	size++;
+	num = -num;
+	}
 
-	return (p_len);
+	{
+	while (buffer[i++] = (num % 10) + '0')
+	num /= 10;
+	}
+	while (num > 0)
+
+	{
+	while (--i >= 0)
+	_putchar(buffer[i]);
+	size++;
+	}
+	return (size);
 }
 
 /**
-* print_percent - Print a percent sign
-* @args: list.
-*
-* Return: Always 1.
-*/
-
+ * print_string - Print a string
+ * @args: Variadic argument list containing the string to print
+ *
+ * Return: Length of the string printed
+ */
+int print_string(va_list args)
+{
+	char *p = va_arg(args, char *);
+	return print((p != NULL) ? p : "(null)");
+}
+/**
+ * print_percent - Print a percent sign
+ * @args: Variadic argument list (unused)
+ *
+ * Return: Always 1.
+ */
 int print_percent(va_list args)
 {
-	(void)args;
-	_putchar('%');
+		(void)args;
+		_putchar('%');
 	return (1);
 }
 
 /**
- * print_char - print char.
- * @args: va_list.
+ * print_char - Print a single charcacter
+ * @args: Variadic argument list containing the character to print
  *
- * Return: 1
+ * Return: Always 1 (the character count printed)
  */
-
 int print_char(va_list args)
 {
-	int aux;
+	int aux = va_arg(args, int);
 
-	aux = va_arg(args, int);
 	_putchar(aux);
-
 	return (1);
 }
