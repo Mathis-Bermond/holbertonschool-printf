@@ -32,40 +32,40 @@ int print(const char *str)
 
 int print_integer(va_list args)
 {
-	int num = va_arg(args, int);
+	int n = va_arg(args, int);
+	int count = 0;
+	char buffer[20];
+	char *ptr = &buffer[19];
+	unsigned int num;
+	char *start_ptr;
 
-	int size = 0;
-
-	char buffer[12];
-
-	int i = 0;
-
-	if (num < INT_MIN)
+	*ptr = '\0';
+	if (n < 0)
 	{
-		return (1);
+		write(1, "-", 1);
+		count++;
+		num = (unsigned int)(-n);
 	}
-	if (num < 0)
+	else
 	{
-		_putchar ('-');
-		size++;
-		num = (unsigned int)(-(unsigned int)num);
+		num = (unsigned int)n;
 	}
-	if (num == 0)
-	{
-		_putchar('0');
-		return (1);
-	}
-	while (num > 0)
-	{
-		buffer[i++] = (num % 10) + '0';
+
+	do {
+		*--ptr = (num % 10) + '0';
 		num /= 10;
-	}
-	while (i-- > 0)
+	} while (num != 0);
+
+	start_ptr = ptr;
+
+	while (*start_ptr)
 	{
-		_putchar(buffer[i]);
-		size++;
+		write(1, start_ptr, 1);
+		start_ptr++;
+		count++;
 	}
-	return (size);
+
+	return (count);
 }
 
 /**
