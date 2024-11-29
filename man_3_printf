@@ -65,7 +65,7 @@ Negative:[-762534]
 Negative:[-762534]
 
 .SH RETURN VALUE
-On success, the total number of characters written is returned. On failure, the function returns a negative value.
+On success, the total number of characters written is returned. On failure, the function returns (1).
 
 .SH AUTHOR
 Herve Le Guennec and Mathis Bermond - Students at Holberton School Frejus.
