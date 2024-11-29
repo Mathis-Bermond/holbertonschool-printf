@@ -13,24 +13,26 @@ _printf - The printf function prints numerical values or ASCII characters charac
 .B The conversion specifiers and their meanings are:
 .IP %%
 Print  a single %
-.IP -b
+.IP -b 
 The unsigned int argument is converted to binary.
 
 .IP -d,i
-The int argument is 
+The int argument is print_integer- Print a number in base 10 
 
 .IP -c
 The int argument is converted to an unsigned char, and the resulting character is written.
 
 
 .IP -o,u,x,X,s,S,p
-The unsigned int argument is converted to ( ) notation:
 
-unsigned octal: (o).
+.IP -o  
+unsigned octal.
 
-unsigned decimal: (u).
+.IP -u 
+unsigned decimal.
 
-unsigned hexadecimal: (x and X).
+.IP -x and X 
+unsigned hexadecimal.
 
 .IP -s
 Character Print a string
