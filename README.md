@@ -6,7 +6,7 @@ In other words, the function receives a format (*const char* **format*) and a li
 
 ## Flow Chart
 
-![Flow chart png](https://github.com/Mathis-Bermond/holbertonschool-printf/blob/main/picture/Data%20structure.png?raw=true)
+![Flow chart png](https://github.com/Mathis-Bermond/holbertonschool-printf/blob/main/picture/Data%20structure%202.png?raw=true)
 
 ## Patterns 
 
