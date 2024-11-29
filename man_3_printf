@@ -44,10 +44,23 @@ The void * pointer argument is printed in hexadecimal
 .SH For example:
 
 _printf("Character: %c", character);
+Character:[H]
 
-_printf("String: %s", string);
+Character:[H]
+
+_printf("String: %s", "string");
+
+String:[I am a string !]
 
 _printf("Integer: %d", integer); (or use "%i" for print integer, depends of the case).
+
+Length:[39, 39]
+
+Length:[39, 39]
+
+Negative:[-762534]
+
+Negative:[-762534]
 
 .SH RETURN VALUE
 On success, the total number of characters written is returned. On failure, the function returns a negative value.
