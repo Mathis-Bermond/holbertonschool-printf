@@ -8,6 +8,8 @@ In other words, the function receives a format (*const char* **format*) and a li
 
 ![Flow chart png](https://github.com/Mathis-Bermond/holbertonschool-printf/blob/main/picture/Data%20structure%202.png?raw=true)
 
+For more details of the Flow Chart [Flow Chart](https://www.canva.com/design/DAGX2OW6n64/D_jLrNu9vCjqP8Q7MZwRjA/edit?utm_content=DAGX2OW6n64&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ## Patterns 
 
 ![enter image description here](https://i.imgur.com/vmU0FhC.png) 	 
