@@ -4,7 +4,11 @@ That is the prototype for this implementation(_printf). As you can see, this pro
 
 In other words, the function receives a format (*const char* **format*) and a list of arguments (the magic of variadic functions). So printf inside, take the string format and search for specific patterns, then the pattern that was found it is passed to other function that prints the match pattern  
 
-### Patterns 
+## Flow Chart
+
+![Flow chart png](./picture/)
+
+## Patterns 
 
 ![enter image description here](https://i.imgur.com/vmU0FhC.png) 	 
 
@@ -24,7 +28,7 @@ That image shows specifiers that we can use in the printf.  In this case, _print
 |%|print__percent|print '%'|
 |R|print_rot|print a string encoded in rot13 format| 
 
-### Authorized functions and macros
+## Authorized functions and macros
 
 - write
 - malloc
@@ -34,7 +38,7 @@ That image shows specifiers that we can use in the printf.  In this case, _print
 - va_copy
 - va_arg
 
-### Compilation
+## Compilation
 
 Your code will be compiled this way:
 
