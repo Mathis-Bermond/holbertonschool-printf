@@ -56,7 +56,7 @@ OS version:
 
 ## Group Project
 
-This project was a group project for a duration of a week , with out any particular circumstention , it was a really great working experience , we leaned to manage git branch and the working process of a group work.
+This project was a group project for a duration of a week, without any particular circumstantial, it was a really great working experience, we learned to manage git branch and the working process of a group work.
 
 This project was a group projet in colaboration with [Krosenvag](https://github.com/Krosenvag)
 
